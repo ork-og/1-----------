@@ -1,0 +1,15 @@
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/bin/Debug/net7.0/1 лаб работа
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/bin/Debug/net7.0/1 лаб работа.deps.json
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/bin/Debug/net7.0/1 лаб работа.runtimeconfig.json
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/bin/Debug/net7.0/1 лаб работа.dll
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/bin/Debug/net7.0/1 лаб работа.pdb
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.csproj.AssemblyReference.cache
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.AssemblyInfoInputs.cache
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.AssemblyInfo.cs
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.csproj.CoreCompileInputs.cache
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.dll
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/refint/1 лаб работа.dll
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.pdb
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/1 лаб работа.genruntimeconfig.cache
+/Users/arkadij/Documents/1 лаб работа/1 лаб работа/obj/Debug/net7.0/ref/1 лаб работа.dll
