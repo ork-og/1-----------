@@ -1,6 +1,6 @@
 ﻿static void Main()
 {
-    Cart cart = new Cart();
+    Cart<Product> cart = new Cart<Product>();
     cart.take_products();
     Console.WriteLine("Нажмите 1, чтобы сбалансировать\n0 - ничего не делать");
     int balance = Convert.ToInt32(Console.ReadLine());
@@ -23,18 +23,18 @@ public class Product
     public string? Elem { get; set; }
 }
 
-public class Market
+public class Market<T> where T: Product, new()
 {
-    public List<Product> Snacks = new List<Product>(new Product[] {new Product{Name="ChocolateBar", Elem="Carbohydratese"}, 
-                                                               new Product{Name="BalykCheese", Elem="Proteins"},
-                                                               new Product{Name="Crisps", Elem="Fats"}});
-    public List<Product> semiFinishedProduct = new List<Product>(new Product[] {new Product{Name="Chicken", Elem="Proteins"}, 
-                                                               new Product{Name="Fruit", Elem="Carbohydratese"},
-                                                               new Product{Name="OliveOil", Elem="Fats"}});
-    public List<Product> firtstProducts =  new List<Product>(new Product[] {new Product{Name="DumplingsMeat", Elem="Proteins"}, 
-                                                               new Product{Name="DumplingsBerries", Elem="Carbohydratese"},
-                                                               new Product{Name="Cheburek", Elem="Fats"}});
-    public List<Product> allProducts = new List<Product>();
+    public List<T> Snacks = new List<T>(new T[] {new T{Name="ChocolateBar", Elem="Carbohydratese"}, 
+                                                               new T{Name="BalykCheese", Elem="Proteins"},
+                                                               new T{Name="Crisps", Elem="Fats"}});
+    public List<T> semiFinishedProduct = new List<T>(new T[] {new T{Name="Chicken", Elem="Proteins"}, 
+                                                               new T{Name="Fruit", Elem="Carbohydratese"},
+                                                               new T{Name="OliveOil", Elem="Fats"}});
+    public List<T> firtstProducts =  new List<T>(new T[] {new T{Name="DumplingsMeat", Elem="Proteins"}, 
+                                                               new T{Name="DumplingsBerries", Elem="Carbohydratese"},
+                                                               new T{Name="Cheburek", Elem="Fats"}});
+    public List<T> allProducts = new List<T>();
     
 
     public Market()
@@ -45,14 +45,14 @@ public class Market
 }
 
 
-public class Cart
+public class Cart<T> where T: Product, new()
 {
-    public List<Product> cart = new List<Product>();
-    public Market market = new Market();
+    public List<T> cart = new List<T>();
+    public Market<T>market = new Market<T>();
     public List<String> elements = new List<string>();
     public List<String> mainElems = new List<string>() {"Proteins", "Fats", "Carbohydratese"};
 
-    public List<Product> products = new List<Product>();
+    public List<T> products = new List<T>();
 
     public void take_products()
     {
@@ -88,7 +88,7 @@ public class Cart
             {
                 return;
             }
-            if (!this.cart.Contains(this.products[choise - 1]))
+            if (!this.cart.Contains((this.products[choise - 1])))
             {
                 this.cart.Add(this.products[choise - 1]);
                 if (!this.elements.Contains(this.products[choise - 1].Elem) && this.mainElems.Contains(this.products[choise - 1].Elem))
@@ -116,7 +116,7 @@ public class Cart
         {
             for (int i = 0; i < this.products.Count(); i++)
             {
-                Product product = this.products[i];
+                T product = this.products[i];
                 if (!this.elements.Contains(product.Elem) && this.mainElems.Contains(product.Elem) && !this.cart.Contains(product)) 
                 {
                     this.cart.Add(product);
