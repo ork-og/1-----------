@@ -17,10 +17,20 @@
 
 Main();
 
-public class Product
+public interface FoodWithCarbohydratese
 {
-    public string? Name { get; set; }
-    public string? Elem { get; set; }
+    bool Carbohydratese { get; set; }
+    bool Proteins { get; set; }
+    bool Fats { get; set; }
+    string elem { get; set; }
+}
+
+public class ChocolateBar: FoodWithCarbohydratese
+{
+    public bool Carbohydratese { get; set; } = true;
+    public bool Proteins { get; set; } = false;
+    public bool Fats { get; set; } = false;
+    public string elem { get; set; } = "Carbohydratese";
 }
 
 public class Market<T> where T: Product, new()
