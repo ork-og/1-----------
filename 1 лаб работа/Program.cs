@@ -1,6 +1,6 @@
 ﻿static void Main()
 {
-    Cart<Product> cart = new Cart<Product>();
+    Cart<Product_class> cart = new Cart<Product_class>();
     cart.take_products();
     Console.WriteLine("Нажмите 1, чтобы сбалансировать\n0 - ничего не делать");
     int balance = Convert.ToInt32(Console.ReadLine());
@@ -17,21 +17,24 @@
 
 Main();
 
-public interface FoodWithCarbohydratese
+public interface Product
 {
     bool Carbohydratese { get; set; }
     bool Proteins { get; set; }
     bool Fats { get; set; }
-    string elem { get; set; }
+    string Elem { get; set; }
+    string Name { set; get; }
 }
 
-public class ChocolateBar: FoodWithCarbohydratese
+public class Product_class: Product
 {
-    public bool Carbohydratese { get; set; } = true;
-    public bool Proteins { get; set; } = false;
-    public bool Fats { get; set; } = false;
-    public string elem { get; set; } = "Carbohydratese";
+    public bool Carbohydratese { get; set; }
+    public bool Proteins { get; set; }
+    public bool Fats { get; set; }
+    public string Elem { get; set; }
+    public string Name { set; get; }
 }
+
 
 public class Market<T> where T: Product, new()
 {
